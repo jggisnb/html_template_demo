@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a006d87d-b4f6-411b-ac85-16a76ea538b3" name="Default Changelist" comment="" />
+    <list default="true" id="a006d87d-b4f6-411b-ac85-16a76ea538b3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +70,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.window.html (2)">
+  <component name="RunManager" selected="JavaScript Debug.window.html (1)">
     <configuration name="index.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/robinhub-main/web/gamestore/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -85,9 +88,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.window.html (1)" />
         <item itemvalue="JavaScript Debug.window.html (2)" />
         <item itemvalue="JavaScript Debug.index.html (2)" />
-        <item itemvalue="JavaScript Debug.window.html (1)" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.window.html" />
       </list>
@@ -155,6 +158,7 @@
       <workItem from="1658888817956" duration="17237000" />
       <workItem from="1658921623926" duration="15896000" />
       <workItem from="1658941644811" duration="6000" />
+      <workItem from="1658941997161" duration="60000" />
     </task>
     <servers />
   </component>
