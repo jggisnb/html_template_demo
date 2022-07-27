@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>YouCyber</title>
+    <!--    <link rel="stylesheet" href="css/window.css" type="text/css">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jcarousel.js" defer></script>
+</head>
+<style>
+    div, span, p {
+        caret-color: transparent;
+    }
+    :root {
+        --main-dark: #11101d;
+        --main-dark-inside: #1b1d31;
+        --main-dark-inside-inside: #3b3d51;
+        --main-light: #fbfbfd;
+        --nav-height: 70px;
+        --main-box-shadow-bottom: 0 2px 0px #1b1d31;
+        --main-box-shadow-right: 2 0px 0px #1b1d31;
+        --main-box-shadow: 0 5px 10px lightgray;
+        --main-icon-width: 45px;
+        --main-icon-height: 45px;
+        --main-icon-font-size: 21px;
+        --guide-sidebar-min-width: 81px;
+        --guide-sidebar-max-width: 198px;
+        --main-transition: all 0.3s ease;
+        --content-view-background: #E4E9F7;
+        --content-view-border-line-color: #dad9e7;
+        --content-view-border-bottom-line: 1px solid rgba(218, 217, 231, 0.75);
+        --recommend_option_view-button-shadow-rgba: rgba(118, 117, 131, 0.45);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #E4E9F7
+    }
+
+    a:-webkit-any-link {
+        cursor: pointer;
+        color: -webkit-link;
+    }
+
+    .bx {
+        font-family: 'boxicons' !important;
+        font-weight: normal;
+        font-style: normal;
+        font-variant: normal;
+        line-height: 1;
+        display: inline-block;
+        text-transform: none;
+        speak: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        cursor: pointer;
+    }
+
+    .i-shine:hover {
+        box-shadow: 0 0 5px #fff;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--nav-height);
+        background: var(--main-dark);
+        box-shadow: var(--main-box-shadow-bottom);
+        z-index: 1000;
+
+    }
+
+    /******************** navbar ********************/
+    nav .navbar {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        padding: 0 0 0 12px;
+    }
+
+    nav .navbar .logo {
+        color: var(--main-light);
+    }
+
+    nav .navbar .logo #window_expandable_menu_btn {
+        font-size: var(--main-icon-font-size);
+        position: relative;
+        width: 33px;
+        height: 33px;
+        line-height: 27px;
+        /*border: 1px solid var(--main-light);*/
+        text-align: center;
+        border-radius: 4px;
+    }
+
+    nav .navbar .logo a {
+        position: relative;
+        left: 10px;
+        font-size: 21px;
+        color: var(--main-light);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    nav .navbar .search {
+        width: 33%;
+        display: flex;
+    }
+
+    nav .navbar .search .bx-search {
+        position: relative;
+        left: 0;
+        font-size: var(--main-icon-font-size);
+        background: var(--main-dark-inside);
+        color: var(--main-light);
+        height: var(--main-icon-height);
+        line-height: 45px;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+        min-width: var(--main-icon-width);
+        text-align: center;
+        /*transform: translateX(-100%);*/
+
+    }
+
+    nav .navbar .search input {
+        position: relative;
+        left: 0;
+        font-size: 15px;
+        color: var(--main-light);
+        font-weight: 400;
+        outline: none;
+        width: 100%;
+        height: 45px;
+        border: none;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+        transition: var(--main-transition);
+        background: var(--main-dark-inside);
+        padding: 0 0 0 10px;
+    }
+
+    nav .navbar .profile-details {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        flex-wrap: nowrap;
+        background: var(--main-dark-inside);
+        padding: 0 0 0 18px;
+        color: var(--main-light);
+
+    }
+
+    nav .navbar .profile-details img {
+        height: 45px;
+        width: 45px;
+        object-fit: cover;
+        border-radius: 6px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    nav .navbar .profile-details .name {
+        font-size: 15px;
+        font-weight: 400;
+        white-space: nowrap;
+    }
+
+    nav .navbar .profile-details .coin {
+        font-size: 12px;
+        font-weight: 400;
+        white-space: nowrap;
+    }
+
+    nav .navbar .profile-details #log_out {
+        min-width: 50px;
+        background: none;
+        position: relative;
+        text-align: center;
+        font-size: 18px;
+        right: 0;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 0;
+        transition: var(--main-transition);
+    }
+
+    /******************** guide_sidebar ********************/
+    .guide_sidebar {
+        background: var(--main-dark);
+        width: var(--guide-sidebar-min-width);
+        position: fixed;
+        height: 100%;
+        left: 0;
+        top: var(--nav-height);
+        display: block;
+        padding: 6px 14px;
+        box-shadow: var(--main-box-shadow-right);
+        transition: var(--main-transition);
+        font-size: var(--main-icon-font-size);
+        z-index: 2000;
+    }
+
+    .guide_sidebar.expand {
+        width: var(--guide-sidebar-max-width);
+    }
+
+
+    .guide_sidebar.expand li .tooltip {
+        display: none;
+    }
+
+    .guide_sidebar.expand li a .link_name {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .guide_list {
+        margin-top: 20px;
+        height: 100%;
+    }
+
+    .guide_list li .tooltip {
+        position: absolute;
+        top: -20px;
+        left: calc(100% + 15px);
+        background: var(--main-light);
+        box-shadow: var(--main-box-shadow);
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-size: 15px;
+        font-weight: 600;
+        opacity: 0;
+        white-space: nowrap;
+        pointer-events: none;
+        transition: 0s;
+    }
+
+
+    .guide_list li {
+        position: relative;
+        margin: 8px 0;
+        list-style: none;
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+
+    .guide_list li a {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        border-radius: 12px;
+        align-items: center;
+        text-decoration: none;
+        transition: var(--main-transition);
+        background: var(--main-dark);
+    }
+
+    .guide_list li a.selected {
+        background: var(--main-dark-inside);
+    }
+
+    .guide_list li a:hover {
+        background: var(--main-light);
+    }
+
+    .guide_list li a:hover i,
+    .guide_list li a:hover .link_name {
+        transition: var(--main-transition);
+        color: var(--main-dark);
+    }
+
+    .guide_list li:hover .tooltip {
+        opacity: 1;
+        pointer-events: auto;
+        transition: var(--main-transition);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .guide_list li i {
+        height: 50px;
+        line-height: 50px;
+        font-size: 21px;
+        border-radius: 12px;
+        color: var(--main-light);
+        min-width: 50px;
+        text-align: center;
+    }
+
+    .guide_list li a .link_name {
+        color: var(--main-light);
+        font-size: 15px;
+        font-weight: 600;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+        transition: var(--main-transition);
+    }
+
+    #content_view {
+        position: absolute;
+        top: var(--nav-height);
+        left: var(--guide-sidebar-min-width);
+        right: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 33px 66px 240px 1fr;
+        background: var(--content-view-background);
+        transition: var(--main-transition);
+
+
+    }
+
+    /******************** recommend_option_view ********************/
+    #recommend_option_view {
+        position: sticky;
+        top: var(--nav-height);
+        z-index: 1001;
+        text-align: center;
+        justify-content: center;
+        border-bottom: var(--content-view-border-bottom-line);
+        background: var(--content-view-background);
+    }
+
+    /******************** rank_select ********************/
+    /* select-box */
+    .select-box {
+        z-index: 100;
+        position: relative;
+        top: 12px;
+        left: 18px;
+        display: flex;
+        width: 108px;
+        flex-direction: column;
+    }
+
+    .select-box .options-container {
+        background: var(--main-dark-inside);
+        color: var(--main-light);
+        max-height: 0;
+        width: 100%;
+        opacity: 0;
+        transition: all 0.4s;
+        border-radius: 9px;
+        overflow: hidden;
+        order: 1;
+    }
+
+    .default_selected {
+        background: var(--main-dark-inside);
+        border-radius: 9px;
+        margin-bottom: 3px;
+        color: var(--main-light);
+        position: relative;
+        order: 0;
+    }
+
+    .default_selected::after {
+        content: "";
+        background: url("img/arrow-down.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 100%;
+        width: 32px;
+        right: 10px;
+        top: 5px;
+        transition: all 0.4s;
+    }
+
+    .select-box .options-container.active {
+        max-height: 240px;
+        opacity: 1;
+        overflow-y: scroll;
+    }
+
+    .select-box .options-container.active + .default_selected::after {
+        transform: rotateX(180deg);
+        top: -6px;
+    }
+
+    .select-box .options-container::-webkit-scrollbar {
+        width: 8px;
+        background: var(--main-dark-inside);
+        border-radius: 0 9px 9px 0;
+    }
+
+    .select-box .options-container::-webkit-scrollbar-thumb {
+        background: var(--main-dark-inside-inside);
+        border-radius: 0 9px 9px 0;
+    }
+
+    .select-box .option,
+    .default_selected {
+        padding: 12px 24px;
+        cursor: pointer;
+    }
+
+    .select-box .option:hover {
+        background: var(--main-dark-inside-inside);
+    }
+
+    .select-box label {
+        cursor: pointer;
+    }
+
+    .select-box .option .radio {
+        display: none;
+    }
+
+    /******************** rank_container ********************/
+    #rank_container{
+        padding-top: 3px;
+        text-align: center;
+        justify-content: center;
+        border-bottom: var(--content-view-border-bottom-line);
+    }
+
+    /******************** recommend_content_view ********************/
+    #recommend_content_view {
+        display: grid;
+        grid-template-columns: 1fr repeat(30,minmax(auto, 30px)) 1fr;
+        grid-gap: 20px;
+    }
+
+    .text--medium {
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 400;
+        color: var(--main-light);
+    }
+
+    .cards {
+        grid-column: 2 / span 30;
+        display: grid;
+        grid-template-columns: repeat(30,minmax(auto, 30px));
+        grid-gap: 20px;
+        padding: 18px 0;
+    }
+
+    .card {
+        grid-column-end: span 5;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--main-dark-inside);
+        cursor: pointer;
+        transition: var(--main-transition);
+        box-shadow: 0 0 5px var(--main-dark-inside-inside);
+    }
+
+    .card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 0 5px var(--main-dark);
+    }
+
+    .card_image_container {
+        width: 100%;
+        padding-top: 56.25%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .card_image_container img {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .card_content{
+        padding: 20px;
+    }
+
+    .card_title {
+        margin-bottom: 20px;
+    }
+
+    .card_info{
+        display: flex;
+        align-self: end;
+        align-items: center;
+    }
+    .card__info{
+        margin-left: auto;
+        padding: 5px 20px;
+        background-color: var(--main-dark-inside-inside);
+        border-radius: 20px;
+    }
+
+    @media screen and (max-width: 1620px) {
+        .card {
+            grid-column-end: span 6;
+        }
+    }
+
+    @media screen and (max-width: 1350px) {
+
+        #recommend_content_view {
+            grid-template-columns: 1fr repeat(12,minmax(auto, 51px)) 1fr;
+            grid-gap: 30px;
+        }
+
+        .cards {
+            grid-column: 2 / span 12;
+            grid-template-columns: repeat(12,minmax(auto, 51px));
+            grid-gap: 30px;
+        }
+
+        .card {
+            grid-column-end: span 3;
+        }
+    }
+
+    @media screen and (max-width: 1170px) {
+        .card {
+            grid-column-end: span 4;
+        }
+    }
+
+    @media screen and (max-width: 945px) {
+        .card {
+            grid-column-end: span 6;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        #recommend_content_view {
+            grid-template-columns: 9px repeat(12,minmax(auto, 30px)) 9px;
+            grid-gap: 9px;
+        }
+
+        .cards {
+            grid-template-columns: repeat(12,minmax(auto, 30px));
+            grid-gap: 9px;
+        }
+
+        /******************** navbar ********************/
+        nav .navbar .search {
+            width: 42%;
+        }
+
+        nav .navbar .profile-details {
+            background: none;
+        }
+
+        nav .navbar .profile-details .name {
+            display: none;
+        }
+
+        nav .navbar .profile-details .coin {
+            display: none;
+
+        }
+
+        nav .navbar .profile-details #log_out {
+            display: none;
+
+        }
+
+    }
+</style>
+<body>
+<nav>
+    <div class="navbar">
+        <div class="logo">
+            <i class="bx bx-menu i-shine" id="window_expandable_menu_btn"></i>
+            <a href="#">YouCyber</a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="搜你想搜...">
+            <i class="bx bx-search i-shine"></i>
+
+        </div>
+        <div class="profile-details">
+            <img src="img/profile.jpg" alt="profileImg">
+            <div class="name_job">
+                <div class="name">Prem Shahi</div>
+                <div class="coin">15积分</div>
+            </div>
+            <i class="bx bx-log-out" id="log_out"></i>
+
+        </div>
+    </div>
+</nav>
+<div class="guide_sidebar" id="#guide_sidebar">
+    <ul class="guide_list">
+        <li>
+            <a href="#" id="guide_a_game_item" onclick="guide_a_game_item_click(this)">
+                <i class='bx bx-game'></i>
+                <span class="link_name">游戏</span>
+            </a>
+            <span class="tooltip">游戏</span>
+        </li>
+        <li>
+            <a href="#" id="guide_a_collection_item" onclick="guide_a_collection_item_click(this)">
+                <i class='bx bx-heart'></i>
+                <span class="link_name">收藏</span>
+            </a>
+            <span class="tooltip">收藏</span>
+        </li>
+        <li>
+            <a href="#" id="guide_a_history_item" onclick="guide_a_history_item_click(this)">
+                <i class='bx bx-history'></i>
+                <span class="link_name">浏览历史</span>
+            </a>
+            <span class="tooltip">浏览历史</span>
+        </li>
+        <li>
+            <a href="#" id="guide_a_publish_item" onclick="guide_a_publish_item_click(this)">
+                <i class='bx bx-send'></i>
+                <span class="link_name">发布</span>
+            </a>
+            <span class="tooltip">发布</span>
+        </li>
+        <li>
+            <a href="#" id="guide_a_follow_item" onclick="guide_a_follow_item_click(this)">
+                <i class='bx bxl-blogger'></i>
+                <span class="link_name">关注</span>
+            </a>
+            <span class="tooltip">关注</span>
+        </li>
+    </ul>
+</div>
+<div id="content_view">
+    <div id="recommend_option_view">
+        <j-carousel mode="label"
+                    label-1="标签1234567810111213141516171819202122232425"
+                    label-2="标签1"
+                    label-3="标签12345678"
+                    label-4="标签"
+                    label-5="标签12345678101112"
+                    label-6="标签123456781011121314151"
+                    label-7="标签1234567810111213141516171819202122"
+                    label-8="标签1234"
+                    label-9="标签123"
+                    label-10="标签"
+                    label-11="标签12345678101112131"
+                    label-12="标"
+                    label-13="签"
+                    label-14="fffsagfsa"
+                    label-15="签12345678101112131415161"
+                    label-16="标签123456781"
+                    responsive_width_scale="0.72">
+            <i slot="prev_img" class='bx bx-chevron-left-square'></i>
+            <i slot="next_img" class='bx bx-chevron-right-square'></i>
+        </j-carousel>
+    </div>
+
+    <div id="rank_select">
+        <div class="select-box">
+            <div class="options-container">
+                <div class="option">
+                    <input type="radio" class="radio" id="total_opt" name="category"/>
+                    <label for="total_opt">总榜</label>
+                </div>
+                <div class="option">
+                    <input type="radio" class="radio" id="month_opt" name="category"/>
+                    <label for="month_opt">月榜</label>
+                </div>
+                <div class="option">
+                    <input type="radio" class="radio" id="week_opt" name="category"/>
+                    <label for="week_opt">周榜</label>
+                </div>
+            </div>
+            <div class="default_selected">
+                总榜
+            </div>
+        </div>
+    </div>
+
+    <div id="rank_container">
+        <j-carousel mode="hovereffectImage_label_card"
+                    hovereffectImage_label_card_top_img_src-1="img/test1.jpg" hovereffectImage_label_card_top_message_text-1="112.45G"  hovereffectImage_label_card_bottom_label_text-1="title 1"
+                    hovereffectImage_label_card_top_img_src-2="img/test2.jpg" hovereffectImage_label_card_top_message_text-2="112.45G"  hovereffectImage_label_card_bottom_label_text-2="title 2"
+                    hovereffectImage_label_card_top_img_src-3="img/test3.jpg" hovereffectImage_label_card_top_message_text-3="112.45G"  hovereffectImage_label_card_bottom_label_text-3="title 3"
+                    hovereffectImage_label_card_top_img_src-4="img/test4.jpg" hovereffectImage_label_card_top_message_text-4="112.45G"  hovereffectImage_label_card_bottom_label_text-4="title 4"
+                    hovereffectImage_label_card_top_img_src-5="img/test5.jpg" hovereffectImage_label_card_top_message_text-5="112.45G"  hovereffectImage_label_card_bottom_label_text-5="title 5"
+                    hovereffectImage_label_card_top_img_src-6="img/test1.jpg" hovereffectImage_label_card_top_message_text-6="112.45G"  hovereffectImage_label_card_bottom_label_text-6="title 6"
+                    hovereffectImage_label_card_top_img_src-7="img/test2.jpg" hovereffectImage_label_card_top_message_text-7="112.45G"  hovereffectImage_label_card_bottom_label_text-7="title 7"
+                    hovereffectImage_label_card_top_img_src-8="img/test3.jpg" hovereffectImage_label_card_top_message_text-8="112.45G"  hovereffectImage_label_card_bottom_label_text-8="title 8"
+                    hovereffectImage_label_card_top_img_src-9="img/test4.jpg" hovereffectImage_label_card_top_message_text-9="112.45G"  hovereffectImage_label_card_bottom_label_text-9="title 9"
+                    hovereffectImage_label_card_top_img_src-10="img/test5.jpg" hovereffectImage_label_card_top_message_text-10="112.45G"  hovereffectImage_label_card_bottom_label_text-10="title 10"
+                    hovereffectImage_label_card_top_img_src-11="img/test1.jpg" hovereffectImage_label_card_top_message_text-11="112.45G"  hovereffectImage_label_card_bottom_label_text-11="title 11"
+                    hovereffectImage_label_card_top_img_src-12="img/test2.jpg" hovereffectImage_label_card_top_message_text-12="112.45G"  hovereffectImage_label_card_bottom_label_text-12="title 12"
+                    hovereffectImage_label_card_top_img_src-13="img/test3.jpg" hovereffectImage_label_card_top_message_text-13="112.45G"  hovereffectImage_label_card_bottom_label_text-13="title 13"
+                    hovereffectImage_label_card_top_img_src-14="img/test4.jpg" hovereffectImage_label_card_top_message_text-14="112.45G"  hovereffectImage_label_card_bottom_label_text-14="title 14"
+                    hovereffectImage_label_card_top_img_src-15="img/test5.jpg" hovereffectImage_label_card_top_message_text-15="112.45G"  hovereffectImage_label_card_bottom_label_text-15="title 15"
+                    responsive_width_scale="0.81">
+            <i slot="prev_img" class='bx bx-chevron-left-square'></i>
+            <i slot="next_img" class='bx bx-chevron-right-square'></i>
+        </j-carousel>
+    </div>
+    <div id="recommend_content_view">
+        <div class="cards">
+            <div class="card">
+                <div class="card_image_container">
+                    <img src="img/thumb.jpg" alt=""/>
+
+                </div>
+                <div class="card_content">
+                    <p class="card_title text--medium">
+                         这是一个标题11111111
+                    </p>
+                    <div class="card_info">
+                        <p class="text--medium">
+                            这是一个详情。。。。
+                        </p>
+                        <p class="card__info text--medium">详情2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_image_container">
+                    <img src="img/thumb.jpg" alt=""/>
+
+                </div>
+                <div class="card_content">
+                    <p class="card_title text--medium">
+                         这是一个标题11111111
+                    </p>
+                    <div class="card_info">
+                        <p class="text--medium">
+                            这是一个详情。。。。
+                        </p>
+                        <p class="card__info text--medium">详情2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_image_container">
+                    <img src="img/thumb.jpg" alt=""/>
+
+                </div>
+                <div class="card_content">
+                    <p class="card_title text--medium">
+                         这是一个标题11111111
+                    </p>
+                    <div class="card_info">
+                        <p class="text--medium">
+                            这是一个详情。。。。
+                        </p>
+                        <p class="card__info text--medium">详情2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_image_container">
+                    <img src="img/thumb.jpg" alt=""/>
+
+                </div>
+                <div class="card_content">
+                    <p class="card_title text--medium">
+                         这是一个标题11111111
+                    </p>
+                    <div class="card_info">
+                        <p class="text--medium">
+                            这是一个详情。。。。
+                        </p>
+                        <p class="card__info text--medium">详情2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_image_container">
+                    <img src="img/thumb.jpg" alt=""/>
+
+                </div>
+                <div class="card_content">
+                    <p class="card_title text--medium">
+                         这是一个标题11111111
+                    </p>
+                    <div class="card_info">
+                        <p class="text--medium">
+                            这是一个详情。。。。
+                        </p>
+                        <p class="card__info text--medium">详情2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_image_container">
+                    <img src="img/thumb.jpg" alt=""/>
+
+                </div>
+                <div class="card_content">
+                    <p class="card_title text--medium">
+                         这是一个标题11111111
+                    </p>
+                    <div class="card_info">
+                        <p class="text--medium">
+                            这是一个详情。。。。
+                        </p>
+                        <p class="card__info text--medium">详情2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_image_container">
+                    <img src="img/thumb.jpg" alt=""/>
+
+                </div>
+                <div class="card_content">
+                    <p class="card_title text--medium">
+                         这是一个标题11111111
+                    </p>
+                    <div class="card_info">
+                        <p class="text--medium">
+                            这是一个详情。。。。
+                        </p>
+                        <p class="card__info text--medium">详情2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_image_container">
+                    <img src="img/thumb.jpg" alt=""/>
+
+                </div>
+                <div class="card_content">
+                    <p class="card_title text--medium">
+                         这是一个标题11111111
+                    </p>
+                    <div class="card_info">
+                        <p class="text--medium">
+                            这是一个详情。。。。
+                        </p>
+                        <p class="card__info text--medium">详情2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_image_container">
+                    <img src="img/thumb.jpg" alt=""/>
+
+                </div>
+                <div class="card_content">
+                    <p class="card_title text--medium">
+                         这是一个标题11111111
+                    </p>
+                    <div class="card_info">
+                        <p class="text--medium">
+                            这是一个详情。。。。
+                        </p>
+                        <p class="card__info text--medium">详情2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_image_container">
+                    <img src="img/thumb.jpg" alt=""/>
+
+                </div>
+                <div class="card_content">
+                    <p class="card_title text--medium">
+                         这是一个标题11111111
+                    </p>
+                    <div class="card_info">
+                        <p class="text--medium">
+                            这是一个详情。。。。
+                        </p>
+                        <p class="card__info text--medium">详情2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_image_container">
+                    <img src="img/thumb.jpg" alt=""/>
+
+                </div>
+                <div class="card_content">
+                    <p class="card_title text--medium">
+                         这是一个标题11111111
+                    </p>
+                    <div class="card_info">
+                        <p class="text--medium">
+                            这是一个详情。。。。
+                        </p>
+                        <p class="card__info text--medium">详情2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_image_container">
+                    <img src="img/thumb.jpg" alt=""/>
+
+                </div>
+                <div class="card_content">
+                    <p class="card_title text--medium">
+                         这是一个标题11111111
+                    </p>
+                    <div class="card_info">
+                        <p class="text--medium">
+                            这是一个详情。。。。
+                        </p>
+                        <p class="card__info text--medium">详情2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_image_container">
+                    <img src="img/thumb.jpg" alt=""/>
+
+                </div>
+                <div class="card_content">
+                    <p class="card_title text--medium">
+                         这是一个标题11111111
+                    </p>
+                    <div class="card_info">
+                        <p class="text--medium">
+                            这是一个详情。。。。
+                        </p>
+                        <p class="card__info text--medium">详情2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_image_container">
+                    <img src="img/thumb.jpg" alt=""/>
+
+                </div>
+                <div class="card_content">
+                    <p class="card_title text--medium">
+                         这是一个标题11111111
+                    </p>
+                    <div class="card_info">
+                        <p class="text--medium">
+                            这是一个详情。。。。
+                        </p>
+                        <p class="card__info text--medium">详情2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_image_container">
+                    <img src="img/thumb.jpg" alt=""/>
+
+                </div>
+                <div class="card_content">
+                    <p class="card_title text--medium">
+                         这是一个标题11111111
+                    </p>
+                    <div class="card_info">
+                        <p class="text--medium">
+                            这是一个详情。。。。
+                        </p>
+                        <p class="card__info text--medium">详情2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_image_container">
+                    <img src="img/thumb.jpg" alt=""/>
+
+                </div>
+                <div class="card_content">
+                    <p class="card_title text--medium">
+                         这是一个标题11111111
+                    </p>
+                    <div class="card_info">
+                        <p class="text--medium">
+                            这是一个详情。。。。
+                        </p>
+                        <p class="card__info text--medium">详情2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_image_container">
+                    <img src="img/thumb.jpg" alt=""/>
+
+                </div>
+                <div class="card_content">
+                    <p class="card_title text--medium">
+                         这是一个标题11111111
+                    </p>
+                    <div class="card_info">
+                        <p class="text--medium">
+                            这是一个详情。。。。
+                        </p>
+                        <p class="card__info text--medium">详情2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script>
+</script>
+<script src="js/window.js"></script>
+<!--<link rel="stylesheet" href="window.html" type="text/css">-->
+</html>

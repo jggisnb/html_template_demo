@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a006d87d-b4f6-411b-ac85-16a76ea538b3" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="29CRwQat05ExJLIxTjQGsho35LA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/gamestore/img" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\gamestore\web\gamestore\img" />
+      <recent name="C:\Users\Administrator\Desktop\gamestore\web\gamestore\js" />
+      <recent name="C:\Users\Administrator\Desktop\gamestore\web\gamestore\css" />
+      <recent name="C:\Users\Administrator\Desktop\gamestore\web\gamestore" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\gamestore\web\gamestore\css" />
+      <recent name="C:\Users\Administrator\Desktop\gamestore\web\gamestore\img" />
+      <recent name="C:\Users\Administrator\Desktop\gamestore\web\gamestore\js" />
+      <recent name="C:\Users\Administrator\Desktop\gamestore\web\gamestore" />
+      <recent name="C:\Users\Administrator\Desktop\gamestore\web\gamestoredemo" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.window.html (2)">
+    <configuration name="index.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/robinhub-main/web/gamestore/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/robinhub/web/gamestore/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="window.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/robinhub/web/gamestore/window.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="window.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/robinhub-main/web/gamestore/window.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="window.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/gamestore/web/gamestore/window.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.window.html (2)" />
+        <item itemvalue="JavaScript Debug.index.html (2)" />
+        <item itemvalue="JavaScript Debug.window.html (1)" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.window.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a006d87d-b4f6-411b-ac85-16a76ea538b3" name="Default Changelist" comment="" />
+      <created>1652615318917</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652615318917</updated>
+      <workItem from="1652615321555" duration="3574000" />
+      <workItem from="1652968593468" duration="6467000" />
+      <workItem from="1653110603508" duration="10550000" />
+      <workItem from="1653227931831" duration="1599000" />
+      <workItem from="1653308911696" duration="10714000" />
+      <workItem from="1653397338243" duration="9827000" />
+      <workItem from="1653484171871" duration="6168000" />
+      <workItem from="1653495551743" duration="658000" />
+      <workItem from="1653570971415" duration="5336000" />
+      <workItem from="1653920821665" duration="3913000" />
+      <workItem from="1654009004506" duration="3124000" />
+      <workItem from="1654086207836" duration="6001000" />
+      <workItem from="1654436807713" duration="2772000" />
+      <workItem from="1654521271567" duration="3915000" />
+      <workItem from="1654610684688" duration="3827000" />
+      <workItem from="1654695601809" duration="3328000" />
+      <workItem from="1655216099805" duration="1405000" />
+      <workItem from="1655387542080" duration="6020000" />
+      <workItem from="1655622078232" duration="26245000" />
+      <workItem from="1655725920736" duration="8796000" />
+      <workItem from="1655818120915" duration="6480000" />
+      <workItem from="1655902714004" duration="6978000" />
+      <workItem from="1655991449384" duration="1922000" />
+      <workItem from="1656236766427" duration="15347000" />
+      <workItem from="1656336212804" duration="1573000" />
+      <workItem from="1656420424620" duration="5253000" />
+      <workItem from="1656426539231" duration="6959000" />
+      <workItem from="1656505904752" duration="11035000" />
+      <workItem from="1656599132210" duration="4005000" />
+      <workItem from="1656687316343" duration="6684000" />
+      <workItem from="1656723678408" duration="2445000" />
+      <workItem from="1656856011232" duration="229000" />
+      <workItem from="1656941885606" duration="6171000" />
+      <workItem from="1657025833473" duration="7198000" />
+      <workItem from="1657104826728" duration="7793000" />
+      <workItem from="1657200786374" duration="4132000" />
+      <workItem from="1657460288832" duration="5483000" />
+      <workItem from="1657542529317" duration="12916000" />
+      <workItem from="1657627585907" duration="8302000" />
+      <workItem from="1658321490966" duration="8919000" />
+      <workItem from="1658408429350" duration="10527000" />
+      <workItem from="1658494518378" duration="6367000" />
+      <workItem from="1658562468894" duration="3916000" />
+      <workItem from="1658574837697" duration="16226000" />
+      <workItem from="1658635885443" duration="27960000" />
+      <workItem from="1658721280295" duration="8064000" />
+      <workItem from="1658746219190" duration="1000" />
+      <workItem from="1658755174075" duration="1931000" />
+      <workItem from="1658812398367" duration="37082000" />
+      <workItem from="1658888817956" duration="17237000" />
+      <workItem from="1658921623926" duration="15896000" />
+      <workItem from="1658941644811" duration="6000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1222" y="312" key="#Web_Browsers" timestamp="1658892304852">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1222" y="312" key="#Web_Browsers/0.0.1920.1040@0.0.1920.1040" timestamp="1658892304852" />
+    <state width="385" height="466" key="DebuggerActiveHint" timestamp="1658911462536">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="385" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1658911462536" />
+    <state x="1208" y="281" key="FileChooserDialogImpl" timestamp="1658892303139">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1208" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1658892303139" />
+    <state width="951" height="82" key="GridCell.Tab.0.bottom" timestamp="1658914989195">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="951" height="82" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1658914989195" />
+    <state width="951" height="82" key="GridCell.Tab.0.center" timestamp="1658914989195">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="951" height="82" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1658914989195" />
+    <state width="951" height="82" key="GridCell.Tab.0.left" timestamp="1658914989195">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="951" height="82" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1658914989195" />
+    <state width="951" height="82" key="GridCell.Tab.0.right" timestamp="1658914989195">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="951" height="82" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1658914989195" />
+    <state width="951" height="82" key="GridCell.Tab.1.bottom" timestamp="1658914989195">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="951" height="82" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1658914989195" />
+    <state width="951" height="82" key="GridCell.Tab.1.center" timestamp="1658914989195">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="951" height="82" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1658914989195" />
+    <state width="951" height="82" key="GridCell.Tab.1.left" timestamp="1658914989195">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="951" height="82" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1658914989195" />
+    <state width="951" height="82" key="GridCell.Tab.1.right" timestamp="1658914989195">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="951" height="82" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1658914989195" />
+    <state width="951" height="82" key="GridCell.Tab.2.bottom" timestamp="1658914989195">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="951" height="82" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1658914989195" />
+    <state width="951" height="82" key="GridCell.Tab.2.center" timestamp="1658914989195">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="951" height="82" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1658914989195" />
+    <state width="951" height="82" key="GridCell.Tab.2.left" timestamp="1658914989195">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="951" height="82" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1658914989195" />
+    <state width="951" height="82" key="GridCell.Tab.2.right" timestamp="1658914989195">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="951" height="82" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1658914989195" />
+    <state x="922" y="171" key="SettingsEditor" timestamp="1658891198965">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="922" y="171" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1658891198965" />
+    <state width="505" height="523" key="XDebugger.FullValuePopup" timestamp="1658913783728">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="505" height="523" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1658913783728" />
+    <state x="24" y="133" width="1183" height="862" key="dock-window-1" timestamp="1658914081122">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="24" y="133" width="1183" height="862" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1658914081122" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JavascriptDebugType">
+        <watch expression="customElements" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

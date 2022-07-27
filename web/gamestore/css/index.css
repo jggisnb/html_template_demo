@@ -1,0 +1,76 @@
+
+/*img {*/
+/*    max-width: 100%;*/
+/*}*/
+
+/*a, a:hover, a:active {*/
+/*    outline: 0px !important;*/
+/*	text-decoration:none;*/
+/*}*/
+/*.carousel{*/
+/*    background: #777777;*/
+/*    height: 100%;*/
+/*}*/
+/*!*carousel*!*/
+/*.carousel-fade .carousel-inner .item {*/
+/*    transition-property: opacity;*/
+/*}*/
+/*.carousel-fade .carousel-inner .item,*/
+/*.carousel-fade .carousel-inner .active.left,*/
+/*.carousel-fade .carousel-inner .active.right {*/
+/*    opacity: 0;*/
+/*}*/
+/*.carousel-fade .carousel-inner .active,*/
+/*.carousel-fade .carousel-inner .next.left,*/
+/*.carousel-fade .carousel-inner .prev.right {*/
+/*    opacity: 1;*/
+/*}*/
+/*.carousel-fade .carousel-inner .next,*/
+/*.carousel-fade .carousel-inner .prev,*/
+/*.carousel-fade .carousel-inner .active.left,*/
+/*.carousel-fade .carousel-inner .active.right {*/
+/*    left: 0;*/
+/*    transform: translate3d(0,0,0);*/
+/*}*/
+/*.carousel-fade .carousel-control {*/
+/*    z-index: 2;*/
+/*    font-size: 90px;*/
+/*    top: 38%;*/
+/*    bottom: 38%;*/
+/*    background: rgba(0,0,0,0);*/
+/*}*/
+
+/*.carousel-inner,*/
+/*.carousel-inner .item {*/
+/*    height: 100%;*/
+/*}*/
+
+/*.carousel-indicators li {*/
+/*    background-color: rgba(0,0,0,0);*/
+/*    border: 1px solid whitesmoke;*/
+/*    border-radius: 0;*/
+/*}*/
+/*.carousel-indicators .active {*/
+/*    background-color: whitesmoke;*/
+/*}*/
+/*.caption {*/
+/*    position: absolute;*/
+/*    top: 64%;*/
+/*    right: 0;*/
+/*    padding: 25px;*/
+/*    padding-left: 25px;*/
+/*    left: 0;*/
+/*}*/
+/*.caption strong {*/
+/*    font-size: 26px;*/
+/*}*/
+/*.caption h2{*/
+/*    color:whitesmoke;*/
+/*    line-height:45px;*/
+/*    font-size: 50px;*/
+/*    font-family: 'Raleway', sans-serif;*/
+/*    font-weight: normal;*/
+/*    margin: 0px 0 25px 0;*/
+/*    text-align: center;*/
+/*    text-transform: uppercase;*/
+/*}*/
