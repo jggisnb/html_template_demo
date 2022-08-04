@@ -443,7 +443,7 @@
         color: var(--main-light);
     }
 
-    .cards {
+    .jcards {
         grid-column: 2 / span 30;
         display: grid;
         grid-template-columns: repeat(30,minmax(auto, 30px));
@@ -451,7 +451,7 @@
         padding: 18px 0;
     }
 
-    .card {
+    .jcard {
         grid-column-end: span 5;
         display: flex;
         flex-direction: column;
@@ -461,19 +461,19 @@
         box-shadow: 0 0 5px var(--main-dark-inside-inside);
     }
 
-    .card:hover {
+    .jcard:hover {
         transform: translateY(-7px);
         box-shadow: 0 0 5px var(--main-dark);
     }
 
-    .card_image_container {
+    .jcard_image_container {
         width: 100%;
         padding-top: 56.25%;
         overflow: hidden;
         position: relative;
     }
 
-    .card_image_container img {
+    .jcard_image_container img {
         width: 100%;
         position: absolute;
         top: 50%;
@@ -481,20 +481,20 @@
         transform: translate(-50%,-50%);
     }
 
-    .card_content{
+    .jcard_content{
         padding: 20px;
     }
 
-    .card_title {
+    .jcard_title {
         margin-bottom: 20px;
     }
 
-    .card_info{
+    .jcard_info{
         display: flex;
         align-self: end;
         align-items: center;
     }
-    .card__info{
+    .jcard__info{
         margin-left: auto;
         padding: 5px 20px;
         background-color: var(--main-dark-inside-inside);
@@ -502,7 +502,7 @@
     }
 
     @media screen and (max-width: 1620px) {
-        .card {
+        .jcard {
             grid-column-end: span 6;
         }
     }
@@ -514,36 +514,39 @@
             grid-gap: 30px;
         }
 
-        .cards {
+        .jcards {
             grid-column: 2 / span 12;
             grid-template-columns: repeat(12,minmax(auto, 51px));
             grid-gap: 30px;
         }
 
-        .card {
+        .jcard {
             grid-column-end: span 3;
         }
     }
 
     @media screen and (max-width: 1170px) {
-        .card {
+        .jcard {
             grid-column-end: span 4;
         }
     }
 
     @media screen and (max-width: 945px) {
-        .card {
+        .jcard {
             grid-column-end: span 6;
         }
     }
 
     @media screen and (max-width: 576px) {
+        .jcard {
+            grid-column-end: span 12;
+        }
         #recommend_content_view {
             grid-template-columns: 9px repeat(12,minmax(auto, 30px)) 9px;
             grid-gap: 9px;
         }
 
-        .cards {
+        .jcards {
             grid-template-columns: repeat(12,minmax(auto, 30px));
             grid-gap: 9px;
         }
@@ -699,387 +702,269 @@
                     hovereffectImage_label_card_top_img_src-13="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" hovereffectImage_label_card_top_message_text-13="112.45G"  hovereffectImage_label_card_bottom_label_text-13="title 13"
                     hovereffectImage_label_card_top_img_src-14="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" hovereffectImage_label_card_top_message_text-14="112.45G"  hovereffectImage_label_card_bottom_label_text-14="title 14"
                     hovereffectImage_label_card_top_img_src-15="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" hovereffectImage_label_card_top_message_text-15="112.45G"  hovereffectImage_label_card_bottom_label_text-15="title 15"
-                    responsive_width_scale="0.81">
+                    responsive_width_scale="0.75">
             <i slot="prev_img" class='bx bx-chevron-left-square'></i>
             <i slot="next_img" class='bx bx-chevron-right-square'></i>
         </j-carousel>
     </div>
     <div id="recommend_content_view">
-        <div class="cards">
-            <div class="card">
-                <div class="card_image_container">
+        <div class="jcards">
+            <div class="jcard card-1" onclick="jcard_onclick(this)">
+                <div class="jcard_image_container">
                     <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
 
                 </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
+                <div class="jcard_content">
+                    <p class="jcard_title text--medium">
                          这是一个标题11111111
                     </p>
-                    <div class="card_info">
+                    <div class="jcard_info">
                         <p class="text--medium">
                             这是一个详情。。。。
                         </p>
-                        <p class="card__info text--medium">详情2</p>
+                        <p class="jcard__info text--medium">详情2</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card_image_container">
+            <div class="jcard card-1" onclick="jcard_onclick(this)">
+                <div class="jcard_image_container">
                     <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
 
                 </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
+                <div class="jcard_content">
+                    <p class="jcard_title text--medium">
                          这是一个标题11111111
                     </p>
-                    <div class="card_info">
+                    <div class="jcard_info">
                         <p class="text--medium">
                             这是一个详情。。。。
                         </p>
-                        <p class="card__info text--medium">详情2</p>
+                        <p class="jcard__info text--medium">详情2</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card_image_container">
+            <div class="jcard card-1" onclick="jcard_onclick(this)">
+                <div class="jcard_image_container">
                     <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
 
                 </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
+                <div class="jcard_content">
+                    <p class="jcard_title text--medium">
                          这是一个标题11111111
                     </p>
-                    <div class="card_info">
+                    <div class="jcard_info">
                         <p class="text--medium">
                             这是一个详情。。。。
                         </p>
-                        <p class="card__info text--medium">详情2</p>
+                        <p class="jcard__info text--medium">详情2</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card_image_container">
+            <div class="jcard card-1" onclick="jcard_onclick(this)">
+                <div class="jcard_image_container">
                     <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
 
                 </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
+                <div class="jcard_content">
+                    <p class="jcard_title text--medium">
                          这是一个标题11111111
                     </p>
-                    <div class="card_info">
+                    <div class="jcard_info">
                         <p class="text--medium">
                             这是一个详情。。。。
                         </p>
-                        <p class="card__info text--medium">详情2</p>
+                        <p class="jcard__info text--medium">详情2</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card_image_container">
+            <div class="jcard card-1" onclick="jcard_onclick(this)">
+                <div class="jcard_image_container">
                     <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
 
                 </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
+                <div class="jcard_content">
+                    <p class="jcard_title text--medium">
                          这是一个标题11111111
                     </p>
-                    <div class="card_info">
+                    <div class="jcard_info">
                         <p class="text--medium">
                             这是一个详情。。。。
                         </p>
-                        <p class="card__info text--medium">详情2</p>
+                        <p class="jcard__info text--medium">详情2</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card_image_container">
+            <div class="jcard card-1" onclick="jcard_onclick(this)">
+                <div class="jcard_image_container">
                     <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
 
                 </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
+                <div class="jcard_content">
+                    <p class="jcard_title text--medium">
                          这是一个标题11111111
                     </p>
-                    <div class="card_info">
+                    <div class="jcard_info">
                         <p class="text--medium">
                             这是一个详情。。。。
                         </p>
-                        <p class="card__info text--medium">详情2</p>
+                        <p class="jcard__info text--medium">详情2</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card_image_container">
+            <div class="jcard card-1" onclick="jcard_onclick(this)">
+                <div class="jcard_image_container">
                     <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
 
                 </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
+                <div class="jcard_content">
+                    <p class="jcard_title text--medium">
                          这是一个标题11111111
                     </p>
-                    <div class="card_info">
+                    <div class="jcard_info">
                         <p class="text--medium">
                             这是一个详情。。。。
                         </p>
-                        <p class="card__info text--medium">详情2</p>
+                        <p class="jcard__info text--medium">详情2</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card_image_container">
+            <div class="jcard card-1" onclick="jcard_onclick(this)">
+                <div class="jcard_image_container">
                     <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
 
                 </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
+                <div class="jcard_content">
+                    <p class="jcard_title text--medium">
                          这是一个标题11111111
                     </p>
-                    <div class="card_info">
+                    <div class="jcard_info">
                         <p class="text--medium">
                             这是一个详情。。。。
                         </p>
-                        <p class="card__info text--medium">详情2</p>
+                        <p class="jcard__info text--medium">详情2</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card_image_container">
+            <div class="jcard card-1" onclick="jcard_onclick(this)">
+                <div class="jcard_image_container">
                     <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
 
                 </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
+                <div class="jcard_content">
+                    <p class="jcard_title text--medium">
                          这是一个标题11111111
                     </p>
-                    <div class="card_info">
+                    <div class="jcard_info">
                         <p class="text--medium">
                             这是一个详情。。。。
                         </p>
-                        <p class="card__info text--medium">详情2</p>
+                        <p class="jcard__info text--medium">详情2</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card_image_container">
+            <div class="jcard card-1" onclick="jcard_onclick(this)">
+                <div class="jcard_image_container">
                     <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
 
                 </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
+                <div class="jcard_content">
+                    <p class="jcard_title text--medium">
                          这是一个标题11111111
                     </p>
-                    <div class="card_info">
+                    <div class="jcard_info">
                         <p class="text--medium">
                             这是一个详情。。。。
                         </p>
-                        <p class="card__info text--medium">详情2</p>
+                        <p class="jcard__info text--medium">详情2</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card_image_container">
+            <div class="jcard card-1" onclick="jcard_onclick(this)">
+                <div class="jcard_image_container">
                     <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
 
                 </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
+                <div class="jcard_content">
+                    <p class="jcard_title text--medium">
                          这是一个标题11111111
                     </p>
-                    <div class="card_info">
+                    <div class="jcard_info">
                         <p class="text--medium">
                             这是一个详情。。。。
                         </p>
-                        <p class="card__info text--medium">详情2</p>
+                        <p class="jcard__info text--medium">详情2</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card_image_container">
+            <div class="jcard card-1" onclick="jcard_onclick(this)">
+                <div class="jcard_image_container">
                     <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
 
                 </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
+                <div class="jcard_content">
+                    <p class="jcard_title text--medium">
                          这是一个标题11111111
                     </p>
-                    <div class="card_info">
+                    <div class="jcard_info">
                         <p class="text--medium">
                             这是一个详情。。。。
                         </p>
-                        <p class="card__info text--medium">详情2</p>
+                        <p class="jcard__info text--medium">详情2</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card_image_container">
+            <div class="jcard card-1" onclick="jcard_onclick(this)">
+                <div class="jcard_image_container">
                     <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
 
                 </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
+                <div class="jcard_content">
+                    <p class="jcard_title text--medium">
                          这是一个标题11111111
                     </p>
-                    <div class="card_info">
+                    <div class="jcard_info">
                         <p class="text--medium">
                             这是一个详情。。。。
                         </p>
-                        <p class="card__info text--medium">详情2</p>
+                        <p class="jcard__info text--medium">详情2</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card_image_container">
+            <div class="jcard card-1" onclick="jcard_onclick(this)">
+                <div class="jcard_image_container">
                     <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
 
                 </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
+                <div class="jcard_content">
+                    <p class="jcard_title text--medium">
                          这是一个标题11111111
                     </p>
-                    <div class="card_info">
+                    <div class="jcard_info">
                         <p class="text--medium">
                             这是一个详情。。。。
                         </p>
-                        <p class="card__info text--medium">详情2</p>
+                        <p class="jcard__info text--medium">详情2</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card_image_container">
+            <div class="jcard card-1" onclick="jcard_onclick(this)">
+                <div class="jcard_image_container">
                     <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
 
                 </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
+                <div class="jcard_content">
+                    <p class="jcard_title text--medium">
                          这是一个标题11111111
                     </p>
-                    <div class="card_info">
+                    <div class="jcard_info">
                         <p class="text--medium">
                             这是一个详情。。。。
                         </p>
-                        <p class="card__info text--medium">详情2</p>
+                        <p class="jcard__info text--medium">详情2</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card_image_container">
-                    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
 
-                </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
-                         这是一个标题11111111
-                    </p>
-                    <div class="card_info">
-                        <p class="text--medium">
-                            这是一个详情。。。。
-                        </p>
-                        <p class="card__info text--medium">详情2</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_image_container">
-                    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
-
-                </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
-                         这是一个标题11111111
-                    </p>
-                    <div class="card_info">
-                        <p class="text--medium">
-                            这是一个详情。。。。
-                        </p>
-                        <p class="card__info text--medium">详情2</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_image_container">
-                    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
-
-                </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
-                         这是一个标题11111111
-                    </p>
-                    <div class="card_info">
-                        <p class="text--medium">
-                            这是一个详情。。。。
-                        </p>
-                        <p class="card__info text--medium">详情2</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_image_container">
-                    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
-
-                </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
-                         这是一个标题11111111
-                    </p>
-                    <div class="card_info">
-                        <p class="text--medium">
-                            这是一个详情。。。。
-                        </p>
-                        <p class="card__info text--medium">详情2</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_image_container">
-                    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
-
-                </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
-                         这是一个标题11111111
-                    </p>
-                    <div class="card_info">
-                        <p class="text--medium">
-                            这是一个详情。。。。
-                        </p>
-                        <p class="card__info text--medium">详情2</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_image_container">
-                    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
-
-                </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
-                         这是一个标题11111111
-                    </p>
-                    <div class="card_info">
-                        <p class="text--medium">
-                            这是一个详情。。。。
-                        </p>
-                        <p class="card__info text--medium">详情2</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card_image_container">
-                    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.lanrentuku.com%2Fimg%2Fallimg%2F1504%2F14300500401454.jpg&refer=http%3A%2F%2Fimg.lanrentuku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661534639&t=119b387ed43cbd5e684ab0df734c0fbc" alt=""/>
-
-                </div>
-                <div class="card_content">
-                    <p class="card_title text--medium">
-                         这是一个标题11111111
-                    </p>
-                    <div class="card_info">
-                        <p class="text--medium">
-                            这是一个详情。。。。
-                        </p>
-                        <p class="card__info text--medium">详情2</p>
-                    </div>
-                </div>
-            </div>
 
         </div>
     </div>
